@@ -1,52 +1,108 @@
-# Klipperdotconfig
+Skip to main content 
+Ellis' Print Tuning Guide  
+Welcome!
+Before We Begin
+A Note About Line Width
+Setting Expectations
+Voron V2 Gantry Squaring
+Tuning
+Extruder Calibration
+Build Surface Preparation & Handling
+First Layer Squish
+Pressure Advance / Linear Advance
+Introduction
+Pattern Method
+Tower Method
+Lines Method (DEPRECATED)
+Saving Your Value
+Extrusion Multiplier
+PA / EM Oddities
+Cooling and Layer Times
+Retraction
+Infill/Perimeter Overlap
+Stepover
+Advanced Tuning
+Determining Maximum Volumetric Flow Rate
+Determining Motor Currents
+Determining Maximum Speeds and Accelerations
+Misc. Guides
+Controlling Temperature G-Code Order
+Passing Slicer Variables to a Macro
+Useful Macros
+Beeper
+Conditional Homing
+Conditional QGL
+Dump Variables
+Get Variable
+Hotend Fan RPM Monitoring
+LCD RGB
+Off
+Parking
+Pause/Resume, Filament Swaps & Sensors
+Replace M109/M190 With TEMPERATURE_WAIT
+Shut Down Host
+TEST_SPEED
+Troubleshooting
+Build Surface Adhesion
+Bulging
+Crimps
+Extruder Skipping
+Extrusion Patterns / "Wood Grain"
+First Layer Inconsistencies
+Thermal Drift
+First Layer Inconsistency
+Z Offset Inconsistency
+Layer Shifting
+PLA is Overheating
+Perimeter Separation
+Pockmarks
+Slicer is Putting Heating G-codes in the Wrong Place/Order
+Small Infill Areas Look Overextruded
+VFAs (Vertical Fine Artifacts)
+Misconceptions & Bad Advice
+My SuperSlicer Profiles
+My Setup
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>3D Printer Configuration</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { width: 300px; margin: 20px auto; }
-        select { width: 100%; padding: 5px; margin: 10px 0; }
-    </style>
-</head>
-<body>
 
-    <div class="container">
-        <h2>3D Printer Configuration</h2>
+Issues, Feedback, & Contributions
+Welcome!
 
-        <!-- Motherboard Controller Dropdown -->
-        <label for="motherboard">Motherboard Controller:</label>
-        <select id="motherboard" name="motherboard">
-            <option value="big_tree_tech_octopus">Big Tree Tech Octopus</option>
-            <option value="pro_big_tree_tech_octopus">Pro Big Tree Tech Octopus</option>
-            <option value="big_tree_tech_skr3z">Big Tree Tech SKR3Z</option>
-            <!-- Add more options as needed -->
-        </select>
+This guide will help you calibrate and tune your 3d printer from A to Z — and should work with most common printers and firmwares!
 
-        <!-- Add more dropdowns for other components -->
-        <!-- Example: Extruder Type -->
-        <label for="extruder">Extruder Type:</label>
-        <select id="extruder" name="extruder">
-            <option value="direct_drive">Direct Drive</option>
-            <option value="bowden">Bowden</option>
-            <!-- Add more options as needed -->
-        </select>
+I have spent a lot of time developing and testing the methods in this guide, and I also hope to dispel some common 3d printer :page_facing_up: misconceptions and bad advice.
 
-        <!-- Example: Hotend Type -->
-        <label for="hotend">Hotend Type:</label>
-        <select id="hotend" name="hotend">
-            <option value="v6">V6</option>
-            <option value="volcano">Volcano</option>
-            <!-- Add more options as needed -->
-        </select>
+I hope for this guide to be free of misinformation, snake oil, and wives’ tales (that are unfortunately quite prevalent.) It can be hard to differentiate the good information from the bad.
 
-        <!-- Add similar dropdowns for other components like bed, sensors, etc. -->
+To follow this tuning guide, you will need:
 
-        <!-- Submit Button -->
-        <button type="submit">Save Configuration</button>
+A ruler.
+Some tape or a marker.
+Maybe a piece of paper.
+…that’s it.
+No calipers, micrometers, feeler gauges, or flux capacitors needed.
+Some patience and willpower helps too.
 
-    </div>
+:dizzy: Each page has a pink banner at the top indicating its compatibility with different printers and firmwares.
 
-</body>
-</html>p
+This guide was originally written for the Voron community, so there may be some Voron-specific notes and troubleshooting pages here and there. The main pages have all been made universal (or close to it).
+
+Icons
+
+:warning: = :exclamation:Please pay extra attention to items marked with this.:exclamation:
+:page_facing_up: = Link to another page.
+:pushpin: = Jump to section (on same page).
+:dizzy: = Page compatibility
+:bulb: = Note
+Firmwares / Printers
+
+ = Klipper
+ = Marlin
+ = RepRapFirmware
+ = Vorons
+Notes
+
+For issues, feedback, and contributions, please open a :page_facing_up: GitHub issue.
+I can also be reached via Discord: :page_facing_up: Ellis#4980
+For troubleshooting & print help, please use the public channels. I get a lot of messages asking for troubleshooting help!
+My SuperSlicer profiles are located :page_facing_up: here.
+You can find the bed models and textures I am using :page_facing_up: here. The bed texture I am using in some of the older screenshots is from :page_facing_up: VoronUsers.
